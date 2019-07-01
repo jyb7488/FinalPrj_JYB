@@ -8,135 +8,157 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Join.jsp</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css"> 
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<title>MemberUpdate.jsp</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap&subset=korean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style type="text/css">
-	.bolck
+	div
 	{
-		width: 100px;
-		text-align: center;
+		font-family: 'Nanum Gothic Coding', monospace;
+		font-family: 'Quicksand', sans-serif;
 	}
-	.bolck2
+	.card
 	{
-		width: 150px;
-		text-align: center;
+		margin-top: 30px;
+		padding: 30px;
 	}
-	.err
+	.dt1
 	{
-		text-align: left;
-		font-size: 10pt;
-		color: red;
-		display: none;
+		width: 50%;
+		display: inline;
+	}
+	.dt2
+	{
+		width: 50%;
+		display: inline;
+	}
+	th
+	{
+		background-color: #F6F6F6;
+		width: 30%;
+	}
+	.mButton.gCenter 
+	{ 
+		position:relative; text-align:center; 
+	}
+	.alignRight
+	{
+		margin: 10px 0;
+    	padding: 0 4px 0 0;
+    	text-align: right;
+	}
+	.card
+	{
+		margin-top: 100px;
+	}
+	span
+	{
+		font-size: small;
 	}
 </style>
 </head>
 <body>
 
-<div class="text-center container">
-  <img src="<%=cp %>/img/cat.png" class="rounded" style="margin-top: 60px;">
-  <form action="" onSubmit="return check()">
-	  <div class="row" style="margin-top: 60px; width: 100%;">
-		    <div class="col-md-6 offset-md-3">
-		    	<!-- 아이디 입력 폼 -->
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck">아이디</span>
+
+<div>
+	<c:import url="Menu.jsp"></c:import>
+
+	<div class="container">
+		<div class="card">
+		  <div class="card-body">
+		    <div class="text-center">
+				<h1>Join</h1>
+				<span><span style="color: red;">*</span> 표시는 필수 입력 항목입니다. 반드시 입력해 주세요.</span>
+			</div><br>
+		    <div>
+		    	<form action="">
+			    	<table class="table">
+					    <tr>
+					      <th>아이디(이메일)<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 300px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">중복확인</button></td>
+					    </tr>
+					     <tr>
+					      <th>비밀번호<span style="color: red;">*</span></th>
+					      <td colspan="3"><input type="text" class="form-control mx-sm-3" style="width: 300px;"><span>- 영문대문자, 영문소문자, 숫자, 특수기호 중 3가지를 포함한 8자리 이상의 암호나<br>
+2가지를 포함한 10자리 이상의 암호를 사용할 수 있습니다.</span></td>
+					    </tr>
+					     <tr>
+					      <th>비밀번호 확인<span style="color: red;">*</span></th>
+					      <td colspan="3"><input type="text" class="form-control mx-sm-3" style="width: 300px;"><span>(확인을 위해 한 번 더 입력하세요.)</span></td>
+					    </tr>
+					     <tr>
+					      <th>닉네임<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 300px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">중복확인</button></td>
+					    </tr>
+					     <tr>
+					      <th>실명확인<span style="color: red;">*</span></th>
+					      <td colspan="3"><button type="button" class="btn btn-outline-primary btn-sm">실명확인</button></td>
+					    </tr>
+					     <tr>
+					      <th>성명<span style="color: red;">*</span></th>
+					      <td><input type="text" class="form-control" style="width: 200px;"></td>
+					      <th style="width: 100px;">전화번호<span style="color: red;">*</span></th>
+					      <td>
+					      <div class="form-row">
+						    <div class="col">
+						      <input type="text" class="form-control" placeholder="010">
+						    </div> - 
+						    <div class="col">
+						      <input type="text" class="form-control" placeholder="0000">
+						    </div> - 
+						    <div class="col">
+						      <input type="text" class="form-control" placeholder="0000">
+						    </div>
+						  </div></td>
+					    <tr>
+					      <th>주소<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 400px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">검색</button></td>
+					    </tr>
+					    <tr>
+					      <th>관심지역1<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 400px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">검색</button></td>
+					    </tr>
+					    <tr>
+					      <th>관심지역2<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 400px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">검색</button></td>
+					    </tr>
+					    <tr>
+					      <th>관심지역3<span style="color: red;">*</span></th>
+					      <td colspan="2"><input type="text" class="form-control mx-sm-3" style="width: 400px;"></td>
+					      <td><button type="button" class="btn btn-outline-primary btn-sm">검색</button></td>
+					    </tr>
+					</table><br><br>
+					<div class="mButton gCenter">
+						<button type="submit" class="btn btn-primary">회원가입</button>
+						<button type="submit" class="btn btn-secondary">취소</button>
 					</div>
-						<input type="text" id="userId" name="userId" class="form-control" placeholder="test@test.com" required="required">
-				</div><br>
-				
-				<!-- 비밀번호 입력 폼 -->
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck">비밀번호</span>
-					</div>
-						<input type="password" id="userPwd" name="userPwd" class="form-control" required="required">
-				</div><br>
-				
-				<!-- 재확인 입력 폼 -->
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck2">비밀번호 재확인</span>
-					</div>
-						<input type="password" id="userRePwd" name="userRePwd" class="form-control" required="required">
-				</div>
-				<br>
-				
-				<!-- 이름 입력 폼 -->	
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck">이름</span>
-					</div>
-						<input type="password" id="userName" name="userName" class="form-control" required="required">
-				</div>
-				<br>
-				
-				<!-- 생년월일 입력 폼 -->	
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck">생년월일</span>
-					</div>
-					  <input type="text" placeholder="년" class="mr-sm-2" id="bYear" name="bYear" required="required">
-					  <select class="custom-select mr-sm-2" id="bMonth" name="bMonth">
-					    <option selected>월</option>
-					    <%for(int i=1; i<13;i++) 
-					      {%>
-					    	<option value="<%=i%>"><%=i %></option>
-					   <%}
-					   %>
-					    
-					  </select>
-					  <select class="custom-select mr-sm-2" id="bDay" name="bDay">
-					     <option selected>일</option>
-						    <%for(int i=1; i<31;i++) 
-						      {%>
-						    	<option value="<%=i%>"><%=i %></option>
-						   <%}
-						   %>
-					  </select>
-				</div>
-				<br>
-				<!-- 전화번호 입력 폼 -->
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text bolck">전화번호</span>				  
-					</div>
-					<select class="form-control">
-						<option>Default select</option>
-					</select>
-				</div>	
-				<div>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="전화번호 입력" id="userTel" name="userTel" required="required">
-					<div class="input-group-append">
-					  <button class="btn btn-outline-secondary" type="button" id="button-addon2">인증번호 받기</button>
-					</div>
-				</div>
-					<input type="text" class="form-control" placeholder="인증번호 입력하세요" readonly="readonly" id="userAuthNum" name="userAuthNum" required="required">
-				</div>
-				<br>
-				
-				<!-- 주소입력 -->
-				<div>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="주소입력" readonly="readonly" id="userAdr" name="userAdr" required="required">
-					<div class="input-group-append">
-					  <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</button>
-					</div>
-				</div>
-					<input type="text" class="form-control" placeholder="상세주소 입력" id="userDeAdr" name="userDeAdr" required="required">
-				</div>
-				<br>
-				
-				<br><br><button type="submit" class="btn btn-primary btn-lg btn-block">가입하기</button>
+				</form>
+		    </div>
 		  </div>
-	  </div>
-  </form>
+		</div>
+	</div>
 </div>
 
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div>
+<hr>
+	<c:import url="Footer.jsp"></c:import>
+</div>
 
 
 </body>

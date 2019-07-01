@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SecessionFinish.jsp</title>
+<title>StrayCatRegistration.jsp</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap&subset=korean" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
@@ -21,23 +21,55 @@
 		font-family: 'Nanum Gothic Coding', monospace;
 		font-family: 'Quicksand', sans-serif;
 	}
+	.card
+	{
+		margin-top: 30px;
+		padding: 30px;
+	}
+	.dt1
+	{
+		width: 50%;
+		display: inline;
+	}
+	.dt2
+	{
+		width: 50%;
+		display: inline;
+	}
+	th
+	{
+		background-color: #F6F6F6;
+		width: 30%;
+	}
+	.mButton.gCenter 
+	{ 
+		position:relative; text-align:center; 
+	}
+	.alignRight
+	{
+		margin: 10px 0;
+    	padding: 0 4px 0 0;
+    	text-align: right;
+	}
+	.card
+	{
+		margin-top: 100px;
+	}
+	span
+	{
+		font-size: small;
+	}
 </style>
 </head>
 <body>
+
 
 <div>
 	<c:import url="Menu.jsp"></c:import>
 
 	<div class="container" style="margin-top: 60px;">
-		<div class="card text-center">
-			<div class="card-header"><h1><span style="color: #007BFF">회원탈퇴</span>가 완료되었습니다.</h1></div>
-			<div class="card-body">
-				<h5 class="card-title">그동안 우리동네고양이를 이용해 주셔서 감사합니다.
-보다 나은 우리동네고양이로 다시 만나뵐 수 있기를 바랍니다.</h5>
-				<button type="button" class="btn btn-primary" onclick="location.href='Join.jsp'">신규 회원가입</button>
-				<button type="button" class="btn btn-light" onclick="location.href='Main.jsp'">첫화면 가기</button>
-			</div>
-		</div>
+		<h1>등록<span>길냥이 등록 신청</span></h1>
+		<hr>
 	</div>
 </div>
 
@@ -49,9 +81,9 @@
 <br />
 <br />
 <div>
-<hr>
 	<c:import url="Footer.jsp"></c:import>
 </div>
+
 
 </body>
 </html>

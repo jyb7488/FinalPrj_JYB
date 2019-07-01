@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SecessionFinish.jsp</title>
+<title>ChangePwComplete.jsp</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap&subset=korean" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
@@ -21,37 +21,55 @@
 		font-family: 'Nanum Gothic Coding', monospace;
 		font-family: 'Quicksand', sans-serif;
 	}
+.bolck {
+	width: 100px;
+	text-align: center;
+}
+.err
+{
+	color: red;
+	font-size: small;
+}
+#footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
 </style>
 </head>
 <body>
 
-<div>
-	<c:import url="Menu.jsp"></c:import>
-
-	<div class="container" style="margin-top: 60px;">
-		<div class="card text-center">
-			<div class="card-header"><h1><span style="color: #007BFF">회원탈퇴</span>가 완료되었습니다.</h1></div>
-			<div class="card-body">
-				<h5 class="card-title">그동안 우리동네고양이를 이용해 주셔서 감사합니다.
-보다 나은 우리동네고양이로 다시 만나뵐 수 있기를 바랍니다.</h5>
-				<button type="button" class="btn btn-primary" onclick="location.href='Join.jsp'">신규 회원가입</button>
-				<button type="button" class="btn btn-light" onclick="location.href='Main.jsp'">첫화면 가기</button>
+	<div>
+		<c:import url="Menu.jsp"></c:import>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="text-center container">
+			<div class="card">
+				<div class="card-header">
+					<h1>비밀번호 변경</h1>
+				</div><br>
+					<h3>비밀번호 변경이 성공적으로 완료되었습니다.</h3><br>
+					<h3>새로운 비밀번호로 다시 로그인 해 주세요.</h3><br>
+					
+					<button type="submit" class="btn btn-primary btn-lg">로그인</button>
+					<br><br>
 			</div>
 		</div>
 	</div>
-</div>
 
-
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<div>
-<hr>
-	<c:import url="Footer.jsp"></c:import>
-</div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div>
+		<c:import url="Footer.jsp"></c:import>
+	</div>
 
 </body>
 </html>

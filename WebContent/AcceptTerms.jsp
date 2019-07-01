@@ -9,20 +9,31 @@
 <head>
 <meta charset="UTF-8">
 <title>TermsOfService.jsp</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap&subset=korean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style type="text/css">
+	div
+	{
+		font-family: 'Nanum Gothic Coding', monospace;
+		font-family: 'Quicksand', sans-serif;
+	}
 	.mButton.gCenter 
 	{ 
 		position:relative; 
 		text-align:center; 
 	}
+	
 </style>
 </head>
 <body>
 
+
+<div>
+	<c:import url="Menu.jsp"></c:import>
 	<div class="container" style="margin-top: 60px;">
 		<div class="card">
 			<div style="margin: 25px;">
@@ -58,10 +69,23 @@
 				<div class="mButton gCenter">
 					<button type="submit" class="btn btn-secondary">이용약관 및 개인정보 수집/이용에 동의합니다.</button>
 				</div>
-				
 			</div>
 		</div>
 	</div>
+	
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div>
+	<c:import url="Footer.jsp"></c:import>
+</div>
+
 
 </body>
 </html>
